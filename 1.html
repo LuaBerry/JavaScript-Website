@@ -5,7 +5,28 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <script>
-
+            function NightDayHandler(self)
+            {
+                var target = document.querySelector('body')
+                var alinks = document.querySelectorAll('a');
+                if(self.value === 'Go Night Mode')
+                {
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'white';
+                    for(var i = 0; i < alinks.length; i++)
+                    {
+                        alinks[i].style.color = 'white';
+                    }
+                    self.value = 'Go Day Mode';
+                }
+                else
+                {
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    alinks.forEach(a =>  a.style.color = 'black');
+                    self.value = 'Go Night Mode';
+                }
+            }
         </script>
     </head>
 
@@ -13,22 +34,10 @@
         <h1><a href="index.html">Developers</a></h1>
         <div id="grid">
             <div id ="index">
-                <input type="button" value="Night" onclick="
-                document.querySelector('body').style.backgroundColor = 'black';
-                document.querySelector('body').style.color = 'white';
-                const alinks = document.querySelectorAll('a');
-                alinks.forEach(a => {
-                    a.style.color = 'white'
-                });
+                <input type="button" value="Go Night Mode" onclick="
+                    NightDayHandler(this);
                 ">
-                <input type="button" value="Day" onclick="
-                document.querySelector('body').style.backgroundColor = 'white';
-                document.querySelector('body').style.color = 'black';
-                const alinkss = document.querySelectorAll('a');
-                alinkss.forEach(a => {
-                    a.style.color = 'black'
-                });
-                ">
+                
                 <ol>
                     <li><a href="1.html">Web developer</a></li>
                     <li><a href="2.html">Game developer</a></li>
