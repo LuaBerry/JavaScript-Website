@@ -23,9 +23,10 @@ img {
     display:grid;
     grid-template-columns: 200px 1fr;
 }
-
-#grid ol {
+#grid #index{
     border-right: 1px solid black;
+}
+#grid ol {
     width: 150px;
     margin:0;
     padding:20px;
