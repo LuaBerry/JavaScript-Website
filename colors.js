@@ -2,30 +2,35 @@ var body =
 {
     SetColor:function(color)
     {
-        document.querySelector('body').style.color = color;
+        //document.querySelector('body').style.color = color;
+        $('body').css("color", color);
     },
     SetBGColor:function(color)
     {
-        document.querySelector('body').style.backgroundColor = color;
+        //document.querySelector('body').style.backgroundColor = color;
+        $('body').css("backgroundColor", color);
     }
 };
 var links =
 {
     SetColor:function(color)
     {
-        var alinks = document.querySelectorAll('a');
-        for(var i = 0; i < alinks.length; i++)
-        {
-            alinks[i].style.color = color;
-        }
+        // var alinks = document.querySelectorAll('a');
+        // for(var i = 0; i < alinks.length; i++)
+        // {
+        //     alinks[i].style.color = color;
+        // }
+        $('a').css("color", color);
     }
 };
 var borders =
 {
     SetBorderColor:function(color)
     {
-        document.querySelector('h1').style.borderBottomColor = color;
-        document.querySelector('#index').style.borderRightColor = color;
+        //document.querySelector('h1').style.borderBottomColor = color;
+        //document.querySelector('#index').style.borderRightColor = color;
+        $('h1').css("borderBottomColor", color);
+        $('#index').css("borderRightColor", color);
     }
 };
 
