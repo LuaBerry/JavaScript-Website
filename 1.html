@@ -4,30 +4,7 @@
         <title>The Developers</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
-        <script>
-            function NightDayHandler(self)
-            {
-                var target = document.querySelector('body')
-                var alinks = document.querySelectorAll('a');
-                if(self.value === 'Go Night Mode')
-                {
-                    target.style.backgroundColor = 'black';
-                    target.style.color = 'white';
-                    for(var i = 0; i < alinks.length; i++)
-                    {
-                        alinks[i].style.color = 'white';
-                    }
-                    self.value = 'Go Day Mode';
-                }
-                else
-                {
-                    target.style.backgroundColor = 'white';
-                    target.style.color = 'black';
-                    alinks.forEach(a =>  a.style.color = 'black');
-                    self.value = 'Go Night Mode';
-                }
-            }
-        </script>
+        <script src="colors.js"></script>
     </head>
 
     <body>
